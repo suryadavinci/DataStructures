@@ -1,56 +1,77 @@
 package algorithms;
-import java.util.List;
+
 import java.util.LinkedList;
 
-
 public class InsertionSort {
+	
+	
+	static LinkedList<Integer> handList=new LinkedList<Integer>();
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int x[]={5,1,6,2,3};
 		
-		LinkedList<Integer> list= new LinkedList<Integer>();
+		int x[]={5,1,11,6,2,3,0,43,12,34,6};
 		
 		
+		new InsertionSort().insertionSort(x);
+		System.out.println(handList);
+
+		
+		
+		
+		
+
+	}
 	
-		int listSize=0;
-		//System.out.println(list);
+	
+	public  void insertionSort(int x[])
+	{
 		
-	//	System.out.println(x.length);
-		for(int i=0;i<x.length;i++)
+		System.out.println(handList);
+		handList.add(x[0]);
+
+		int handSize=0;
+		for(int i=1;i<x.length;i++)
 		{
+			System.out.println("checking "+x[i]+" in "+handList);
+			handSize=handList.size();
 			
-			System.out.println(x[i]);
-			System.out.println(list);
-			
-			listSize=list.size();
-			for(int j=0;j<listSize;j++)
+			for(int j=0;j<handSize;j++)
 			{
-				//if(list.getLast()<=x[i] )					{list.add(x[i]);					break;					}
-				//System.out.println(j+" "+list.size());
-				if(list.get(j) > x[i])
-					list.add(j, x[i]);
-				else if(j==listSize)
+
+				if(handList.get(j)>x[i])
 					{
-					list.add(x[i]);
+					handList.add(j, x[i]);
 					break;
 					}
+				if(j==handSize-1)
+					handList.add(x[i]);
 				
 			}
-			if(list.isEmpty() )
-				list.add(x[i]);
-				
+
+
 			
-				
+		}
+	}
+	
+	
+	
+	public static void insertionSortArray(int[] x)
+	{
+		
+		for(int i=1;i<x.length;i++)
+		{
 			
 			
 		}
 		
 		
-		System.out.println(list);
 		
-
 	}
+	
+	
+	
 
 }
