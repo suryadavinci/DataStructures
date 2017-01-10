@@ -1,6 +1,5 @@
 package datastructures;
 
-import java.util.LinkedList;
 
 public class Stack {
 
@@ -21,19 +20,14 @@ public class Stack {
 
 		Stack s= new Stack("hello");
 		
-	
-		s.push(1);
-
-
-		s.push(2);
-
-		s.push(3);
-
-		s.push(4);
-
-		s.push(5);
-		
-		System.out.println(s.name);
+	System.out.println(s.isEmpty());
+	s.push("1");
+	s.push("2");
+	System.out.println(s.peek());
+	s.push("4");
+	s.pop();
+	s.push("3");
+	System.out.println(s.isEmpty());
 		
 		for(int i=0;!s.isEmpty();i++)
 		{
@@ -86,7 +80,7 @@ public class Stack {
 	
 	public Object peek()
 	{
-
+		
 		return top.value;
 	}
 	
