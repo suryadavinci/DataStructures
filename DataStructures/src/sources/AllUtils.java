@@ -3,14 +3,14 @@ package sources;
 public class AllUtils {
 	
 	
-	int[] array;
-	int size;
+	private int[] array;
+	private int size;
 	
 	public static void main(String[] args) {
+		new AllUtils(10);
 		
 		
-		
-		System.out.println(Math.random());
+
 	}
 	
 	
@@ -18,23 +18,24 @@ public class AllUtils {
 	{
 		this.size=size;
 		this.array = new int[size];
-		
+		generateRandomArray();
+		printArray();
 	}
 	
 	
 	void generateRandomArray()
 	{
 		for(int i=0;i<this.array.length;i++)
-;
+			array[i]=(int) Math.round((Math.random()*this.size*10));
 		}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-
+	void printArray()
+	{
+		for(int i=0;i<this.array.length;i++)
+		{
+			System.out.print(array[i]+" ");
+		}
+		
+	}
 }
