@@ -19,16 +19,6 @@ public class MyMergeSort {
 		
 		AllUtils.printArray(merge.array);
 		
-		
-		
-		
-		TreeSet<Integer> x= new TreeSet<Integer>();
-		
-		
-		
-		
-		
-
 	}
 
 	
