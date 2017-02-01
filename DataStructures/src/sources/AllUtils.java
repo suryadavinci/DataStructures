@@ -13,13 +13,16 @@ public class AllUtils {
 
 	}
 	
-	
+	public int[] getArray()
+	{
+		return this.array;
+	}
 	AllUtils(int size)
 	{
 		this.size=size;
 		this.array = new int[size];
 		generateRandomArray();
-		printArray();
+		//printArray();
 	}
 	
 	
@@ -32,10 +35,34 @@ public class AllUtils {
 	
 	void printArray()
 	{
+		System.out.print("[ ");
 		for(int i=0;i<this.array.length;i++)
 		{
-			System.out.print(array[i]+" ");
+			System.out.print(array[i]+", ");
 		}
+		System.out.println("]");
+		
+	}
+	
+	
+	 public static void printArray(int[] array)
+	{
+		for(int i=0;i<array.length*7;i++)
+		{
+			System.out.print("-");
+		}
+		System.out.println();
+		for(int i=0;i<array.length;i++)
+		{
+			System.out.print("  "+array[i]+"  |");
+		}
+		System.out.println();
+		for(int i=0;i<array.length*7;i++)
+		{
+			System.out.print("-");
+		}
+		System.out.println();
+		
 		
 	}
 }

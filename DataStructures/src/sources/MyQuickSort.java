@@ -8,6 +8,14 @@ public class MyQuickSort {
 	
 	int totalIterations=0;
 	
+	
+	public int[] getArray()
+	{
+		
+		return array;
+	}
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
