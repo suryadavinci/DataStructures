@@ -53,14 +53,13 @@ public class Partitioning {
 			// or an item bigger than pivot is found. Then
 			// wait for rightPointer to finish cycling
 
-			while (leftPointer < (arraySize - 1)
-					&& theArray[++leftPointer] < pivot)
+			while (leftPointer < (arraySize - 1) && theArray[++leftPointer] < pivot)
 				;
 
 			printHorzArray(leftPointer, rightPointer);
 
-			System.out.println(theArray[leftPointer] + " in index "
-					+ leftPointer + " is bigger than the pivot value " + pivot);
+			System.out.println(
+					theArray[leftPointer] + " in index " + leftPointer + " is bigger than the pivot value " + pivot);
 
 			// Cycle through array until the beginning is reached
 			// or an item smaller than pivot is found.
@@ -70,9 +69,8 @@ public class Partitioning {
 
 			printHorzArray(leftPointer, rightPointer);
 
-			System.out.println(theArray[rightPointer] + " in index "
-					+ rightPointer + " is smaller than the pivot value "
-					+ pivot);
+			System.out.println(
+					theArray[rightPointer] + " in index " + rightPointer + " is smaller than the pivot value " + pivot);
 
 			printHorzArray(leftPointer, rightPointer);
 
@@ -88,8 +86,7 @@ public class Partitioning {
 
 				swapValues(leftPointer, rightPointer);
 
-				System.out.println(theArray[leftPointer] + " was swapped for "
-						+ theArray[rightPointer]);
+				System.out.println(theArray[leftPointer] + " was swapped for " + theArray[rightPointer]);
 
 			}
 
