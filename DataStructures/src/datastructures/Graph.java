@@ -58,7 +58,8 @@ public class Graph {
 		al.add(5);
 		al.add(0,10);
 
-		
+		l.get(0);
+		al.get(0);
 		System.out.println(al.get(0)+" "+al.get(1));
 		
 	}
