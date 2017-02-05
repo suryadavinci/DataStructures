@@ -10,6 +10,7 @@ class Vertex {
 	private ArrayList<Edge> neighbourhood;
 
 	Vertex(String label) {
+		
 
 		this.label = label;
 		this.neighbourhood = new ArrayList<Edge>();
