@@ -29,7 +29,8 @@ public class DoublyLinkedList<E> {
 		System.out.println("Current : " + x + " size " + x.size);
 
 		x.remove(2);
-		System.out.println("After Removing 3rd Element : " + x + " size " + x.size);
+		System.out.println("After Removing 3rd Element : " + x + " size "
+				+ x.size);
 
 	}
 
@@ -97,6 +98,7 @@ public class DoublyLinkedList<E> {
 		Node<E> prev;
 		Node<E> next;
 		E value;
+		int data;
 
 		Node(Node<E> previous, E value, Node<E> nextElement) {
 			this.prev = previous;
@@ -106,5 +108,4 @@ public class DoublyLinkedList<E> {
 		}
 
 	}
-
 }
