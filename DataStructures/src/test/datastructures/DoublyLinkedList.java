@@ -1,6 +1,6 @@
 package test.datastructures;
 
-public class LinkedList<E> {
+public class DoublyLinkedList<E> {
 
 	private int size = 0;
 
@@ -10,7 +10,7 @@ public class LinkedList<E> {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		LinkedList<Integer> x = new LinkedList<Integer>();
+		DoublyLinkedList<Integer> x = new DoublyLinkedList<Integer>();
 
 		System.out.println(x.isEmpty());
 
