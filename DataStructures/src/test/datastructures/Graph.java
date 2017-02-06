@@ -129,6 +129,7 @@ public class Graph {
 
 		Graph graph = new Graph();
 
+		
 		graph.addVertex(new Vertex("Surya"));
 		graph.addVertex(new Vertex("Pavithran"));
 		graph.addVertex(new Vertex("Arun"));
@@ -149,6 +150,9 @@ public class Graph {
 	}
 
 	public void printGraph() {
+
+		String format = "%-10s%s%n";
+		
 		int tempWeight = 0;
 		Vertex tempVertex;
 		Iterator i = this.vertices.entrySet().iterator();
@@ -162,9 +166,10 @@ public class Graph {
 			for (int j = 0; j < tempVertex.getNeighbourhoodCount(); j++) {
 				tempWeight = tempVertex.getNeighbor(j).weight;
 
-				System.out.println(tempVertex.getNeighbor(j).one.getLabel()
-						+ " ---" + tempWeight + "---->  "
+				System.out.printf(format, tempVertex.getNeighbor(j).one.getLabel(), " ---" + tempWeight + "---->  "
 						+ tempVertex.getNeighbor(j).two.getLabel());
+				
+				//System.out.println(tempVertex.getNeighbor(j).one.getLabel()+ " ---" + tempWeight + "---->  "+ tempVertex.getNeighbor(j).two.getLabel());
 			}
 			i.remove();
 		}
