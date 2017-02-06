@@ -28,8 +28,6 @@ public class MergeSort {
 		{
 			mid=(left+right)/2;
 			
-			
-			
 			doMergeSort(left, mid);
 			
 			doMergeSort(mid+1, right);
