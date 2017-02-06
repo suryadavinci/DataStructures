@@ -7,7 +7,10 @@ import java.util.Map;
 import java.util.Stack;
 
 class Vertex {
+<<<<<<< HEAD
 	
+=======
+>>>>>>> branch 'master' of https://github.com/suryadavinci/DataStructures
 
 	private String label;
 	private ArrayList<Edge> neighbourhood;
