@@ -1,5 +1,7 @@
 package test.algorithms;
 
+import java.util.Arrays;
+
 public class MergeSort {
 
 	private int array[];
@@ -7,7 +9,10 @@ public class MergeSort {
 	private int length;
 	
 	public static void main(String[] args) {
-		new MergeSort(new int[]{5,3,6,7,8,4,1,2});
+		System.out.println("hello world");
+		MergeSort ms=new MergeSort(new int[]{5,3,6,7,8,4,1,2});
+		ms.printArray();
+
 	}
 	
 	public MergeSort(int[] inputArray) {
@@ -16,6 +21,7 @@ public class MergeSort {
 		this.array=inputArray;
 		this.length=inputArray.length;
 		this.tempArray=new int[this.length];
+		this.printArray();
 		this.doMergeSort(0,this.length-1);
 	}
 	
@@ -41,16 +47,49 @@ public class MergeSort {
 
 
 
-	private void merge(int left, int mid, int right) {
+	private void merge(int low, int mid, int high) {
 		
 		
-		System.out.println(left+" "+ mid+" "+right);
-		// TODO Auto-generated method stub
-		/*for(int i=left;i<=right;i++)
+		System.out.println(low+" "+ mid+" "+high);
+		System.out.println("current");
+		printArray();
+		System.out.println("temp");
+		System.out.println(Arrays.toString(tempArray));
+		for(int i=low;i<=high;i++)
+			tempArray[i]=array[i];
+		
+		
+		int i=low;
+		int j=mid+1;
+		int k=low;
+		
+		
+		while(i<=mid && j<=high)
 		{
-			if(array[left]<array[right])
-				tempArray[]
-		}*/
+			if(tempArray[i]<=tempArray[j]){
+				array[k]=tempArray[i];
+				i++;
+			}
+			else
+			{
+				array[k]=tempArray[j];
+				j++;
+			}
+			k++;
+		}
+		
+		while(i<=mid)
+		{
+			array[k]=tempArray[i];
+			i++;
+			k++;
+			
+		}
+
+	}
+	public void printArray()
+	{
+		System.out.println(Arrays.toString(this.array));
 	}
 
 }
