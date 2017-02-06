@@ -11,19 +11,12 @@ public class DoublyLinkedList<E> {
 		// TODO Auto-generated method stub
 
 		DoublyLinkedList<Integer> x = new DoublyLinkedList<Integer>();
-
 		System.out.println(x.isEmpty());
-
 		x.add(5);
-
 		x.add(10);
-
 		x.add(15);
-
 		x.add(22);
-
 		x.add(34);
-
 		x.add(90);
 
 		System.out.println("Current : " + x + " size " + x.size);
