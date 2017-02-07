@@ -25,6 +25,16 @@ public class AllUtils {
 		for (int i = 0; i < this.array.length; i++)
 			array[i] = (int) Math.round((Math.random() * this.size * 10));
 	}
+	
+	public static int[] generateRandomArray(int size) {
+		int[] random= new int[size];
+		
+		for (int i = 0; i < random.length; i++)
+			random[i] = (int) (Math.random() * 50) + 10;
+		return random;
+	}
+	
+	
 
 	void printArray() {
 		System.out.print("[ ");
