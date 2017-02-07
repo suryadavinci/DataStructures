@@ -8,6 +8,7 @@ import java.util.Stack;
 
 class Vertex {
 
+
 	private String label;
 	private ArrayList<Edge> neighbourhood;
 
