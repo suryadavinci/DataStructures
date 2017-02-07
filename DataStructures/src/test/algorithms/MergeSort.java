@@ -12,7 +12,6 @@ public class MergeSort {
 		System.out.println("hello world");
 		MergeSort ms=new MergeSort(new int[]{5,3,6,7,8,4,1,2});
 		ms.printArray();
-		
 
 	}
 	
