@@ -1,7 +1,6 @@
 package test.datastructures;
 
 
-
 public class BinaryTree {
 
 	class Node{
@@ -20,20 +19,25 @@ public class BinaryTree {
 	BinaryTree(int data){
 		this.root=new Node(data);
 	}
-
 	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		BinaryTree tree= new BinaryTree(5);
+		BinaryTree tree= new BinaryTree((int) (Math.random() * 50));
 
-		tree.insert( 1);
+		
 
-		tree.insert(10);
+		
+		for (int i = 0; i < 15; i++)
+			tree.insert((int) (Math.random() * 500));
+		
+		
+		
 
-
-		tree.printOrder(tree.root, "p1");
+		tree.printOrder( "p1");
+		tree.printOrder( "p2");
+		tree.printOrder( "l");
 		 
 
 		// System.out.println(tree.root.left.data);
@@ -97,7 +101,7 @@ public class BinaryTree {
 
 	}
 
-	public void printOrder(Node root, String order) {
+	public void printOrder(String order) {
 		System.out.println();
 		if (order.equals("i")) {
 			System.out.println("=================");
@@ -140,8 +144,8 @@ public class BinaryTree {
 	public  void levelOrder(Node root) {
 
 		int height = getHeight(root);
-		System.out.println(height);
-		for (int i = 0; i < height; i++) {
+		System.out.println("height "+height);
+		for (int i = 0; i <=height; i++) {
 			// System.out.print(returnTabs(height-i));
 			
 			printGivenLevel(root, i);
