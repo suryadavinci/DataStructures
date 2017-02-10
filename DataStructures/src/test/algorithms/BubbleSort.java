@@ -6,6 +6,7 @@ import sources.AllUtils;
 
 public class BubbleSort {
 
+	
 	private int array[];
 	private int arraySize;
 	private long iterCount;
