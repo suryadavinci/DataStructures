@@ -1,75 +1,92 @@
 package test.datastructures;
 
-
 public class BinaryTree {
 
-	class Node{
-		
+	class Node {
+
 		Node left;
 		Node right;
 		int data;
-		
-		Node(int data){
-			this.data=data;
+
+		Node(int data) {
+			this.data = data;
 		}
 	}
-	
+
 	Node root;
-	
-	BinaryTree(int data){
-		this.root=new Node(data);
+
+	BinaryTree(int data) {
+		this.root = new Node(data);
 	}
-	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		BinaryTree tree= new BinaryTree((int) (Math.random() * 50));
-
-		
-
-		
-		for (int i = 0; i < 15; i++)
+		//BinaryTree tree = new BinaryTree((int) (Math.random() * 50));
+		BinaryTree tree= new BinaryTree(4);
+		/*for (int i = 0; i < 15; i++)
 			tree.insert((int) (Math.random() * 500));
+*/
+		//tree.insert(4);
+		tree.insert(2);
+		tree.insert(1);
+		tree.insert(3);
+		tree.insert(6);
+		tree.insert(5);
+		tree.insert(7);
 		
+		System.out.println(tree.search(8));
+		System.out.println(tree.search(2));
 		
-		
-
-		tree.printOrder( "p1");
-		tree.printOrder( "p2");
-		tree.printOrder( "l");
-		 
+		tree.printOrder("p1");
+		tree.printOrder("p2");
+		tree.printOrder("l");
 
 		// System.out.println(tree.root.left.data);
 		// System.out.println(tree.root.right.data);
 
 	}
+
 	
-	
-	
-	public void insert(int data){
-		insert(this.root,new Node(data));
-	}
-	
-	public Node insert(Node currentNode,Node newNode)
+	public boolean search(int data)
 	{
-	
-		System.out.println("hello");
+		Node focusNode=this.root;
 
-		if(currentNode==null){
-			return newNode;
-		}
-		else if(newNode.data<currentNode.data){
-			currentNode.left=insert(currentNode.left, newNode);
-			}
-		else if(newNode.data>=currentNode.data){
-			currentNode.right=insert(currentNode.right,newNode);
-			}
-		return currentNode;
+		while(focusNode!=null)
+		{
+			if(focusNode.data==data)
+			return true;
+			else if(data< focusNode.data)
+				focusNode=focusNode.left;
+			else
+				focusNode=focusNode.right;
 			
+		}
+		return false;
+	}
+	
+	
+
+	public void insert(int data) {
+		insert(this.root, new Node(data));
 	}
 
-	public  void findBinarySum(Node root, int sum) {
+	public Node insert(Node currentNode, Node newNode) {
+
+		//System.out.println("hello");
+
+		if (currentNode == null) {
+			return newNode;
+		} else if (newNode.data < currentNode.data) {
+			currentNode.left = insert(currentNode.left, newNode);
+		} else if (newNode.data >= currentNode.data) {
+			currentNode.right = insert(currentNode.right, newNode);
+		}
+		return currentNode;
+
+	}
+
+	public void findBinarySum(Node root, int sum) {
 		int internalSum = 0;
 		if (internalSum == sum)
 			System.out.println("Sum Found");
@@ -79,7 +96,7 @@ public class BinaryTree {
 		}
 	}
 
-	public  void preOrder(Node root) {
+	public void preOrder(Node root) {
 
 		if (root != null) {
 
@@ -90,7 +107,7 @@ public class BinaryTree {
 
 	}
 
-	public  void postOrder(Node root) {
+	public void postOrder(Node root) {
 
 		if (root != null) {
 
@@ -131,7 +148,7 @@ public class BinaryTree {
 
 	}
 
-	public  void inOrder(Node root) {
+	public void inOrder(Node root) {
 
 		if (root != null) {
 			inOrder(root.left);
@@ -141,13 +158,13 @@ public class BinaryTree {
 
 	}
 
-	public  void levelOrder(Node root) {
+	public void levelOrder(Node root) {
 
 		int height = getHeight(root);
-		System.out.println("height "+height);
-		for (int i = 0; i <=height; i++) {
+		System.out.println("height " + height);
+		for (int i = 0; i <= height; i++) {
 			// System.out.print(returnTabs(height-i));
-			
+
 			printGivenLevel(root, i);
 
 			System.out.println("------");
@@ -164,7 +181,7 @@ public class BinaryTree {
 		return s.toString();
 	}
 
-	public  void printGivenLevel(Node root, int level) {
+	public void printGivenLevel(Node root, int level) {
 		if (root == null)
 			return;
 		if (level == 0) {
