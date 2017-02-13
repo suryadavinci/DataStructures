@@ -1,5 +1,6 @@
 package test.datastructures;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 
@@ -7,12 +8,82 @@ public class Stack<E> {
 
 	int top = -1;
 	E[] stack;
-
+	HashMap<Character, Integer> precedenceTable;
 	Stack(int size) {
 		this.stack = (E[]) new Object[size];
 	}
 
+	
+	public  void loadPrecedence(){
+		precedenceTable=new HashMap<Character, Integer>();
+		precedenceTable.put('(',1);
+		precedenceTable.put(')',1);
+		precedenceTable.put('+',2);
+		precedenceTable.put('-',2);
+		precedenceTable.put('*',3 );
+		precedenceTable.put('/',3);
+		
+	}
+	
 	public static void main(String[] args) {
+		Stack<Character> infixToPostfix = new Stack<Character>(100);
+		//String input="(A-B)+(D*E-F)";
+		System.out.println("Enter an expression with variables A-Z and operators ()+-*/");
+		Scanner s=new Scanner(System.in);
+		String input= s.next();
+		StringBuilder output= new StringBuilder();
+		infixToPostfix.loadPrecedence();
+		Character current =' ';
+		
+		for(int i=0;i<input.length();i++){
+			
+			current=input.charAt(i);
+			
+			if(current<65+26 && current>=65){
+				output.append(current);
+			}
+			else if(current==')'){
+				while(!infixToPostfix.isEmpty() && infixToPostfix.peek()!=')'){
+					output.append(infixToPostfix.peek());
+					infixToPostfix.pop();
+				}
+				infixToPostfix.pop();
+			}
+			else {
+		//		System.out.println(infixToPostfix.peek()+" "+current);
+				
+		//		System.out.println(infixToPostfix.precedenceTable.get(infixToPostfix.peek()) +" "+infixToPostfix.precedenceTable.get(current) );
+				
+				if(current!='('){
+				while(!infixToPostfix.isEmpty() && infixToPostfix.precedenceTable.get(infixToPostfix.peek()) >= infixToPostfix.precedenceTable.get(current)  ){
+					output.append(infixToPostfix.peek());
+					infixToPostfix.pop();
+				}
+				
+				infixToPostfix.push(current);
+				}
+			}
+		}
+		
+		
+		while(!infixToPostfix.isEmpty()){
+			output.append(infixToPostfix.peek());
+			infixToPostfix.pop();
+		}
+		
+		System.out.println(output);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void balancedBracket(String[] args) {
 		Stack<Character> balancedBracket = new Stack<Character>(100000);
 		Scanner in = new Scanner(System.in);
 		int t = in.nextInt();
