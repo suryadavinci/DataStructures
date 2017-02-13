@@ -25,9 +25,12 @@ public class Stack<E> {
 		
 	}
 	
-	public static void main(String[] args) {
+	public static void infixToPostfix(String[] args) {
 		Stack<Character> infixToPostfix = new Stack<Character>(100);
 		//String input="(A-B)+(D*E-F)";
+		
+		
+		
 		System.out.println("Enter an expression with variables A-Z and operators ()+-*/");
 		Scanner s=new Scanner(System.in);
 		String input= s.next();
