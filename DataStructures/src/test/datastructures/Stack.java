@@ -9,6 +9,7 @@ public class Stack<E> {
 	int top = -1;
 	E[] stack;
 	HashMap<Character, Integer> precedenceTable;
+	@SuppressWarnings("unchecked")
 	Stack(int size) {
 		this.stack = (E[]) new Object[size];
 	}
