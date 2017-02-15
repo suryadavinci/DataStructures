@@ -6,10 +6,18 @@ public class QuickSort {
 	
 	private int[] array;
 	private int iterations;
+	private int swapCount;
+	private int recursionCount;
+	private int loopCount;
+	
+	
 	
 	QuickSort(int size){
 		this.array=new int[size];
 		this.iterations=0;
+		this.swapCount=0;
+		this.recursionCount=0;
+		this.loopCount=0;
 	}
 	
 	
@@ -24,6 +32,7 @@ public class QuickSort {
 		
 		System.out.println(Arrays.toString(quick.array));
 		System.out.println(quick.iterations);
+		System.out.println(quick.swapCount+" "+quick.loopCount+" "+quick.recursionCount);
 		
 		
 	}
@@ -37,6 +46,7 @@ public class QuickSort {
 	
 	void quickSort(int left, int right){
 		++iterations;
+		++recursionCount;
 		int pivot;
 		if(left>=right){
 			return;
@@ -56,7 +66,7 @@ public class QuickSort {
 		//System.out.println(array[left]+" "+array[right-1]+" "+array[pivot]);
 		
 		while(true){
-			
+			++loopCount;
 			while(leftPointer<pivot && array[++leftPointer]<=array[pivot] );
 			
 			while(rightPointer>0 && array[--rightPointer]>array[pivot]);
@@ -79,6 +89,7 @@ public class QuickSort {
 		return leftPointer;
 	}
 	void swap(int i1,int i2){
+		++swapCount;
 		int temp=array[i1];
 		array[i1]=array[i2];
 		array[i2]=temp;
