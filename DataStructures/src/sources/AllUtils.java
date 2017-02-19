@@ -34,6 +34,21 @@ public class AllUtils {
 		return random;
 	}
 	
+	public static int[] generateRandomArray(int size, int range){
+		
+		int[] random= new int[size];
+		int i=0;
+		 while (i< random.length){
+			random[i] = (int) (Math.random() * 10000)/range ;
+			
+			if(random[i]<=range)
+				i++;
+			
+		}
+		return random;
+		
+		
+	}
 	
 
 	void printArray() {
