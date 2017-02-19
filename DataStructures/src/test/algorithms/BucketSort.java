@@ -14,7 +14,7 @@ public class BucketSort {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new BucketSort(1000);
+		new BucketSort(100);
 	}
 	
 	@SuppressWarnings("unchecked")
