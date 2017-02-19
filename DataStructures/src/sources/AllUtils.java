@@ -1,5 +1,7 @@
 package sources;
 
+import java.util.Random;
+
 public class AllUtils {
 
 	private int[] array;
@@ -26,29 +28,30 @@ public class AllUtils {
 			array[i] = (int) Math.round((Math.random() * this.size * 10));
 	}
 	
-	public static int[] generateRandomArray(int size) {
+	public static int[] generateRandomIntArray(int size, int min, int max) {
 		int[] random= new int[size];
+		Random rand = new Random();
 		
 		for (int i = 0; i < random.length; i++)
-			random[i] = (int) (Math.random() * 50) + 10;
+			random[i] = rand.nextInt((max - min) + 1) + min;
+
 		return random;
 	}
 	
-	public static int[] generateRandomArray(int size, int range){
-		
-		int[] random= new int[size];
-		int i=0;
-		 while (i< random.length){
-			random[i] = (int) (Math.random() * 10000)/range ;
-			
-			if(random[i]<=range)
-				i++;
-			
-		}
+	
+	
+	
+	
+	public static float[] generateRandomFloatArray(int size) {
+		float[] random= new float[size];
+		Random rand = new Random();
+		for (int i = 0; i < random.length; i++)
+			random[i] = rand.nextFloat();
 		return random;
-		
-		
 	}
+	
+	
+
 	
 
 	void printArray() {
