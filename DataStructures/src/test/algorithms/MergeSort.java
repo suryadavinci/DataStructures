@@ -35,7 +35,7 @@ public class MergeSort {
 	public MergeSort(int size) {
 		// TODO Auto-generated constructor stub
 
-		this.array = AllUtils.generateRandomArray(size);
+		this.array = AllUtils.generateRandomIntArray(size,1,size);
 		this.length = size;
 		this.tempArray = new int[this.length];
 		// this.printArray();

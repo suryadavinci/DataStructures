@@ -9,17 +9,17 @@ public class CountingSort {
 	int[] outputArray;
 	public static void main(String[] arg){
 		
-		CountingSort cSort= new CountingSort(100,11);
+		CountingSort cSort= new CountingSort(100);
 		
 	}
 	
 	CountingSort(){
-		this.array=new int[]{1,4,1,2,7,5,2};
+		//this.array=new int[]{1,4,1,2,7,5,2};
 	}
-	CountingSort(int size, int range){
+	CountingSort(int size){
 		this();
 		if(this.array==null){
-			array=AllUtils.generateRandomArray(10, 9);
+			array=AllUtils.generateRandomIntArray(size, 1, size);
 		}
 		outputArray=new int[this.array.length];
 		System.out.println(Arrays.toString(array));

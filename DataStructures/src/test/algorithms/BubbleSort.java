@@ -24,7 +24,7 @@ public class BubbleSort {
 	}
 	
 	BubbleSort(int size){
-		this.array=AllUtils.generateRandomArray(size);
+		this.array=AllUtils.generateRandomIntArray(size, 1, size);
 		this.arraySize=size;
 	}
 	
