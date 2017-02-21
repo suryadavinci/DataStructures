@@ -15,6 +15,7 @@ public class NumberSystem {
 		mem[0]="0";
 		mem[1]="1";
 		
+		
 
 		for(int i=0;i<n;i++)
 			System.out.println(i+" \t"+computeNthNumber(i));
