@@ -22,8 +22,7 @@ public class DoublyLinkedList<E> {
 		System.out.println("Current : " + x + " size " + x.size);
 
 		x.remove(2);
-		System.out.println("After Removing 3rd Element : " + x + " size "
-				+ x.size);
+		System.out.println("After Removing 3rd Element : " + x + " size " + x.size);
 
 	}
 

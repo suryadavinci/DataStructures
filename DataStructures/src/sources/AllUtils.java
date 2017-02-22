@@ -27,32 +27,24 @@ public class AllUtils {
 		for (int i = 0; i < this.array.length; i++)
 			array[i] = (int) Math.round((Math.random() * this.size * 10));
 	}
-	
+
 	public static int[] generateRandomIntArray(int size, int min, int max) {
-		int[] random= new int[size];
+		int[] random = new int[size];
 		Random rand = new Random();
-		
+
 		for (int i = 0; i < random.length; i++)
 			random[i] = rand.nextInt((max - min) + 1) + min;
 
 		return random;
 	}
-	
-	
-	
-	
-	
+
 	public static float[] generateRandomFloatArray(int size) {
-		float[] random= new float[size];
+		float[] random = new float[size];
 		Random rand = new Random();
 		for (int i = 0; i < random.length; i++)
 			random[i] = rand.nextFloat();
 		return random;
 	}
-	
-	
-
-	
 
 	void printArray() {
 		System.out.print("[ ");

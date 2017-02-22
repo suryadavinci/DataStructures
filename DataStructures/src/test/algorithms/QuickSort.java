@@ -14,7 +14,6 @@ public class QuickSort {
 
 	public static void main(String[] args) {
 
-		
 		QuickSort theSort = new QuickSort(10);
 
 		System.out.println(Arrays.toString(QuickSort.theArray));
@@ -24,10 +23,8 @@ public class QuickSort {
 		System.out.println(Arrays.toString(QuickSort.theArray));
 
 	}
-	
-	
-	public void printArray()
-	{
+
+	public void printArray() {
 		System.out.println(Arrays.toString(QuickSort.theArray));
 	}
 
@@ -53,13 +50,16 @@ public class QuickSort {
 
 			int pivot = theArray[right];
 
-			//System.out.println("Value in right " + theArray[right] + " is made the pivot");
+			// System.out.println("Value in right " + theArray[right] + " is
+			// made the pivot");
 
-			//System.out.println("left = " + left + " right= " + right + " pivot= " + pivot + " sent to be partitioned");
+			// System.out.println("left = " + left + " right= " + right + "
+			// pivot= " + pivot + " sent to be partitioned");
 
 			int pivotLocation = partitionArray(left, right, pivot);
 
-			//System.out.println("Value in left " + theArray[left] + " is made the pivot");
+			// System.out.println("Value in left " + theArray[left] + " is made
+			// the pivot");
 
 			quickSort(left, pivotLocation - 1); // Sorts the left side
 
@@ -80,22 +80,24 @@ public class QuickSort {
 			while (theArray[++leftPointer] < pivot)
 				;
 
-			//printHorzArray(leftPointer, rightPointer);
+			// printHorzArray(leftPointer, rightPointer);
 
-			//System.out.println(					theArray[leftPointer] + " in index " + leftPointer + " is bigger than the pivot value " + pivot);
+			// System.out.println( theArray[leftPointer] + " in index " +
+			// leftPointer + " is bigger than the pivot value " + pivot);
 
 			while (rightPointer > 0 && theArray[--rightPointer] > pivot)
 				;
 
-			//printHorzArray(leftPointer, rightPointer);
+			// printHorzArray(leftPointer, rightPointer);
 
-			//System.out.println(					theArray[rightPointer] + " in index " + rightPointer + " is smaller than the pivot value " + pivot);
+			// System.out.println( theArray[rightPointer] + " in index " +
+			// rightPointer + " is smaller than the pivot value " + pivot);
 
-			//printHorzArray(leftPointer, rightPointer);
+			// printHorzArray(leftPointer, rightPointer);
 
 			if (leftPointer >= rightPointer) {
 
-				//System.out.println("left is >= right so start again");
+				// System.out.println("left is >= right so start again");
 
 				break;
 
@@ -105,7 +107,8 @@ public class QuickSort {
 
 				swapValues(leftPointer, rightPointer);
 
-				//System.out.println(theArray[leftPointer] + " was swapped for " + theArray[rightPointer]);
+				// System.out.println(theArray[leftPointer] + " was swapped for
+				// " + theArray[rightPointer]);
 
 			}
 
@@ -131,7 +134,7 @@ public class QuickSort {
 
 			// Generate a random array with values between
 			// 10 and 59
-			
+
 			theArray[i] = (int) (Math.random() * 50) + 10;
 
 		}

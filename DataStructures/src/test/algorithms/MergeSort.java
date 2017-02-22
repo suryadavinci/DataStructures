@@ -14,28 +14,28 @@ public class MergeSort {
 
 		long start = 0;
 		long end = 0;
-		
-		int arraySize=1000000;
-		
+
+		int arraySize = 1000000;
+
 		start = System.currentTimeMillis();
 		MergeSort ms = new MergeSort(arraySize);
 		end = System.currentTimeMillis();
-		System.out.println("Merge Sort Time " + (end-start));
-		//ms.printArray();
+		System.out.println("Merge Sort Time " + (end - start));
+		// ms.printArray();
 
 		start = System.currentTimeMillis();
 		QuickSort qs = new QuickSort(arraySize);
 		qs.quickSort(0, arraySize - 1);
 		end = System.currentTimeMillis();
-		System.out.println("Quick Sort Time " + (end-start));
-		//qs.printArray();
+		System.out.println("Quick Sort Time " + (end - start));
+		// qs.printArray();
 
 	}
 
 	public MergeSort(int size) {
 		// TODO Auto-generated constructor stub
 
-		this.array = AllUtils.generateRandomIntArray(size,1,size);
+		this.array = AllUtils.generateRandomIntArray(size, 1, size);
 		this.length = size;
 		this.tempArray = new int[this.length];
 		// this.printArray();

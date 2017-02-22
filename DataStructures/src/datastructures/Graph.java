@@ -10,21 +10,20 @@ class Vertex {
 	private ArrayList<Edge> neighbourhood;
 
 	Vertex(String label) {
-		
 
 		this.label = label;
 		this.neighbourhood = new ArrayList<Edge>();
 	}
-	
-	public String getLabel(){
+
+	public String getLabel() {
 		return this.label;
 	}
-	
-	public Edge getNeighbor(int index){
+
+	public Edge getNeighbor(int index) {
 		return this.neighbourhood.get(index);
 	}
-	
-	public int getNeighbourhoodCount(){
+
+	public int getNeighbourhoodCount() {
 		return this.neighbourhood.size();
 	}
 
@@ -59,45 +58,35 @@ public class Graph {
 	}
 
 	public boolean addVertex(Vertex vertex, boolean overwriteExistingEdge) {
-		
-		Vertex current= this.vertices.get(vertex.getLabel());
-		
-		if(current!=null )
-		{
-			if(!overwriteExistingEdge)
-			{
+
+		Vertex current = this.vertices.get(vertex.getLabel());
+
+		if (current != null) {
+			if (!overwriteExistingEdge) {
 				return false;
 			}
-			
-			while(current.getNeighbourhoodCount()>0)
-			{
+
+			while (current.getNeighbourhoodCount() > 0) {
 				this.removeEdge(current.getNeighbor(0));
 			}
-			
-			
+
 		}
 		return overwriteExistingEdge;
 
 	}
-	
-	
-
 
 	private void removeEdge(Edge neighbor) {
 		// TODO Auto-generated method stub
-		
+
 		this.edges.remove(neighbor);
-		
+
 	}
 
 	public static void main(String[] args) {
 
 	}
-	
-	
-	
-	
-	public Vertex get(String label){
+
+	public Vertex get(String label) {
 		return this.vertices.get(label);
 	}
 

@@ -22,22 +22,23 @@ public class BinaryTree {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//BinaryTree tree = new BinaryTree((int) (Math.random() * 50));
-		BinaryTree tree= new BinaryTree(4);
-		/*for (int i = 0; i < 15; i++)
-			tree.insert((int) (Math.random() * 500));
-*/
-		//tree.insert(4);
+		// BinaryTree tree = new BinaryTree((int) (Math.random() * 50));
+		BinaryTree tree = new BinaryTree(4);
+		/*
+		 * for (int i = 0; i < 15; i++) tree.insert((int) (Math.random() *
+		 * 500));
+		 */
+		// tree.insert(4);
 		tree.insert(2);
 		tree.insert(1);
 		tree.insert(3);
 		tree.insert(6);
 		tree.insert(5);
 		tree.insert(7);
-		
+
 		System.out.println(tree.search(8));
 		System.out.println(tree.search(2));
-		
+
 		tree.printOrder("p1");
 		tree.printOrder("p2");
 		tree.printOrder("l");
@@ -47,25 +48,20 @@ public class BinaryTree {
 
 	}
 
-	
-	public boolean search(int data)
-	{
-		Node focusNode=this.root;
+	public boolean search(int data) {
+		Node focusNode = this.root;
 
-		while(focusNode!=null)
-		{
-			if(focusNode.data==data)
-			return true;
-			else if(data< focusNode.data)
-				focusNode=focusNode.left;
+		while (focusNode != null) {
+			if (focusNode.data == data)
+				return true;
+			else if (data < focusNode.data)
+				focusNode = focusNode.left;
 			else
-				focusNode=focusNode.right;
-			
+				focusNode = focusNode.right;
+
 		}
 		return false;
 	}
-	
-	
 
 	public void insert(int data) {
 		insert(this.root, new Node(data));
@@ -73,7 +69,7 @@ public class BinaryTree {
 
 	public Node insert(Node currentNode, Node newNode) {
 
-		//System.out.println("hello");
+		// System.out.println("hello");
 
 		if (currentNode == null) {
 			return newNode;
