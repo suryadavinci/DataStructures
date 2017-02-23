@@ -1,4 +1,4 @@
-package test.datastructures;
+package test.datastructures.archive;
 
 import java.util.ArrayList;
 import java.util.HashMap;
