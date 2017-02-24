@@ -3,14 +3,26 @@ package test.algorithms.dynamic;
 public class LongestCommonSubSequence {
 
 	int maxLen=0;
+	String[][] mem;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		new LongestCommonSubSequence().getLCS("ABCBDAB", "BDCABA", "");
+		String s1="ABCBDAB";
+		String s2= "BDCABA";
+		
+		LongestCommonSubSequence dynamic =new LongestCommonSubSequence();
+		dynamic.mem=new String[s1.length()][s2.length()];
+		dynamic.getDynamicLCS(s1,s2, "");
 
 	}
 	
 	
+	private void getDynamicLCS(String s1, String s2, String com) {
+
+		
+	}
+
+
 	public void getLCS(String s1,String s2,String com){
 		
 		if(s1.length()==0 || s2.length()==0){
@@ -36,6 +48,8 @@ public class LongestCommonSubSequence {
 		}
 		
 	}
+
+
 
 
 }
