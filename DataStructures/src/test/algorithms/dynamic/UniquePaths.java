@@ -10,8 +10,8 @@ public class UniquePaths {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		UniquePaths up = new UniquePaths();
-		up.n = 20;
-		up.m = 20;
+		up.n = 500;
+		up.m = 500;
 		up.mem = new long[up.n][up.m];
 		
 		
@@ -19,6 +19,7 @@ public class UniquePaths {
 		
 		System.out.println(up.totalNonDynamicPaths(0, 0));
 		
+		long x=1000000007;
 
 	}
 
