@@ -7,9 +7,12 @@ public class AllUtils {
 	private int[] array;
 	private int size;
 
+	
+	
+	
 	public static void main(String[] args) {
 		new AllUtils(10);
-
+		
 	}
 
 	public int[] getArray() {
