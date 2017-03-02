@@ -41,12 +41,16 @@ public class Trie {
 		
 		t.insert("surya");
 		t.insert("suraj");
-		t.insert("sur");
 
 
 		System.out.println(t.search("sur"));
 		System.out.println(t.search("suraj"));
 		System.out.println(t.search("surya"));
+
+		t.insert("sur");
+		
+		System.out.println(t.search("sur"));
+
 
 	}
 
