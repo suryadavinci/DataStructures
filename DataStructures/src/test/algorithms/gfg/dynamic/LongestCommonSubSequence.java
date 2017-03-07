@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class LongestCommonSubSequence {
-	static HashMap<String,Integer> mem;
+	static HashMap<String, Integer> mem;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
@@ -13,7 +14,7 @@ public class LongestCommonSubSequence {
 		String s2;
 		int t = s.nextInt();
 		for (int i = 0; i < t; i++) {
-			mem=new HashMap<String, Integer>();
+			mem = new HashMap<String, Integer>();
 			s.nextInt();
 			s.nextInt();
 			s1 = s.next();
@@ -28,9 +29,9 @@ public class LongestCommonSubSequence {
 		int maxLength = 0;
 		if (str1.length() == 0 || str2.length() == 0)
 			return 0;
-		
-		if(mem.containsKey(str1+"-"+str2))
-			return mem.get(str1+"-"+str2);
+
+		if (mem.containsKey(str1 + "-" + str2))
+			return mem.get(str1 + "-" + str2);
 
 		if (str1.charAt(0) == str2.charAt(0)) {
 			{
@@ -42,7 +43,7 @@ public class LongestCommonSubSequence {
 					getCommonSubSequence(str1.substring(1), str2));
 		}
 
-		mem.put(str1+"-"+str2, maxLength);
+		mem.put(str1 + "-" + str2, maxLength);
 		System.out.println(mem);
 		return maxLength;
 

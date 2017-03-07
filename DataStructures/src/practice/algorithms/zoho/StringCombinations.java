@@ -5,16 +5,17 @@ public class StringCombinations {
 	static int count = 0;
 
 	static String input;
-	static int len;	
+	static int len;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		input="abc";
-		len=input.length();
-		
-	//permute("", "surya");
-		for(int i=1;i<=3;i++)
-		permute("",i);
+		input = "abc";
+		len = input.length();
+
+		// permute("", "surya");
+		for (int i = 1; i <= 3; i++)
+			permute("", i);
 	}
 
 	public static void permute(String prefix, String input) {
@@ -30,11 +31,9 @@ public class StringCombinations {
 		}
 
 	}
-	
-
 
 	public static void permute(String prefix, int k) {
-		
+
 		if (k == 0) {
 			System.out.println(++count + "\t " + prefix);
 			return;
@@ -42,7 +41,7 @@ public class StringCombinations {
 
 		for (int i = 0; i < len; i++) {
 
-			permute(prefix + "" + input.charAt(i), k-1);
+			permute(prefix + "" + input.charAt(i), k - 1);
 		}
 
 	}

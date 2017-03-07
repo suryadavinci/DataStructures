@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class LeastMaximumNumberRHS {
 
-	 static int input[]={ 43, 3, 9,45,345,24,23,53,1, 95, 25, 32, 80};
+	static int input[] = { 43, 3, 9, 45, 345, 24, 23, 53, 1, 95, 25, 32, 80 };
 
-	//static int input[] = { 43, 3, 91, 95, 32, 80 };
+	// static int input[] = { 43, 3, 91, 95, 32, 80 };
 
 	public static void main(String[] args) {
 		System.out.println(Arrays.toString(input));

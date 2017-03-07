@@ -7,17 +7,12 @@ public class AllUtils {
 	private int[] array;
 	private int size;
 
-	
-	
-	
 	public static void main(String[] args) {
-		//new AllUtils(10);
-		
+		// new AllUtils(10);
 
-		
-		for(Integer i=1000;i<100000;i++)
+		for (Integer i = 1000; i < 100000; i++)
 			System.out.println(i.hashCode());
-				
+
 	}
 
 	public int[] getArray() {
