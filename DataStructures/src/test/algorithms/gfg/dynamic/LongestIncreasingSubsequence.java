@@ -3,18 +3,24 @@ package test.algorithms.gfg.dynamic;
 public class LongestIncreasingSubsequence {
 	static int[] a;
 	public static void main(String[] args) {
-		a=new int[]{10,22,9,33,21,50,41,60,80};
-		System.out.println(lis(1,0));
+		a=new int[]{9,21,41,60,17,99,80,120};
+		System.out.println(lis(0,1));
 	}
 	
 	public static int lis(int index, int count){
-		int value=a[index-1];
-		while(index<a.length && value>a[index++])System.out.println(value+" "+a[index]);;
+		if(index>=a.length)
+			return 0;
+		
+		int value=a[index];
+		while(index+1<a.length && value>a[index+1]){
+			//System.out.println(value+" "+a[index++]);
+			index++;
+			}
 			
 		if(index>=a.length)
-			return count;
+			return 0;
 		else 
-			count=count+lis(index,++count);
+			count=1+lis(index+1,++count);
 		
 		return count;
 	}
