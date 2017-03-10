@@ -11,8 +11,7 @@ public class InsertionSort {
 	int size;
 
 	InsertionSort(int size) {
-		this.array = new int[size];
-		AllUtils.generateRandomIntArray(size, 1, size);
+		this.array=AllUtils.generateRandomIntArray(size, 1, size);
 		this.size = size;
 	}
 
@@ -23,7 +22,7 @@ public class InsertionSort {
 
 	public static void main(String[] args) {
 
-		InsertionSort sort = new InsertionSort(10);
+		InsertionSort sort = new InsertionSort(1000);
 		System.out.println(Arrays.toString(sort.array));
 		sort.sort();
 		System.out.println(Arrays.toString(sort.array));

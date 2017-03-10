@@ -1,5 +1,6 @@
 package sources;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class AllUtils {
@@ -9,9 +10,7 @@ public class AllUtils {
 
 	public static void main(String[] args) {
 		// new AllUtils(10);
-
-		for (Integer i = 1000; i < 100000; i++)
-			System.out.println(i.hashCode());
+		System.out.println(Arrays.toString(generateRandomIntArray(10, 1, 10)));
 
 	}
 
