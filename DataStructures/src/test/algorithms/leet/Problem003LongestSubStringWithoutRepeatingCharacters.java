@@ -3,27 +3,25 @@ package test.algorithms.leet;
 public class Problem003LongestSubStringWithoutRepeatingCharacters {
 
 	
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
     
-    	StringBuilder current=new StringBuilder("");
-    	StringBuilder max;
+    	StringBuilder current=new StringBuilder(s.substring(0, 1));
+    	StringBuilder max=new StringBuilder(s.substring(0, 1));
     	
-    	for(int i=0;i<s.length();i++){
-    		
-    		
-    		
+    	for(int i=1;i<s.length();i++){
+    		if(s.charAt(i)!=s.charAt(i-1))
+    				current.append(s.charAt(i));
+    		else
+    				current=new StringBuilder(s.substring(i, i+1));
+    		if(current.length()>max.length())
+    			max=new StringBuilder(current.toString());
     	}
-    	
-    	
-    	
-    	
-    	
-    	return 0;
+    	return max.length();
     }
     
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		System.out.println(lengthOfLongestSubstring("hellodear"));
 	}
 
 }
