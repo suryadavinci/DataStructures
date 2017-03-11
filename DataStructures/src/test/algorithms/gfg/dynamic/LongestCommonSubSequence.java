@@ -35,7 +35,7 @@ public class LongestCommonSubSequence {
 
 		if (str1.charAt(0) == str2.charAt(0)) {
 			{
-				//System.out.print(str1.charAt(0));
+				// System.out.print(str1.charAt(0));
 				maxLength = 1 + getCommonSubSequence(str1.substring(1), str2.substring(1));
 			}
 		} else {
@@ -44,7 +44,7 @@ public class LongestCommonSubSequence {
 		}
 
 		mem.put(str1 + "-" + str2, maxLength);
-		//System.out.println(mem);
+		// System.out.println(mem);
 		return maxLength;
 
 	}

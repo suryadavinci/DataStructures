@@ -11,7 +11,7 @@ public class InsertionSort {
 	int size;
 
 	InsertionSort(int size) {
-		this.array=AllUtils.generateRandomIntArray(size, 1, size);
+		this.array = AllUtils.generateRandomIntArray(size, 1, size);
 		this.size = size;
 	}
 
