@@ -1,11 +1,7 @@
 package practice.algorithms.fd;
-
 import java.util.Arrays;
-
 import sources.AllUtils;
-
 public class FindSumInAnArray {
-
 	public static void main(String[] args) {
 		int[] x = AllUtils.generateRandomIntArray(1000,1,100);
 		int eSum=65;
@@ -30,8 +26,5 @@ public class FindSumInAnArray {
 				rp--;
 			}
 		}
-
-		
 	}
-
 }
