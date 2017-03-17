@@ -55,7 +55,7 @@ public class BinaryTree {
 			myPrintEachLevel(root, i);
 		}
 	}
-	
+	 
 	public void myPrintEachLevel(Node root, int level){
 		if(root==null)
 			return;
