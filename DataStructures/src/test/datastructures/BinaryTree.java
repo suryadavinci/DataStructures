@@ -43,11 +43,34 @@ public class BinaryTree {
 		tree.printOrder("p2");
 		tree.printOrder("l");
 
+		tree.myLevelIterator(tree.root);
 		// System.out.println(tree.root.left.data);
 		// System.out.println(tree.root.right.data);
 
 	}
 
+	
+	public void myLevelIterator(Node root){
+		for(int i=0;i<=this.getHeight(root);i++){
+			myPrintEachLevel(root, i);
+		}
+	}
+	
+	public void myPrintEachLevel(Node root, int level){
+		if(root==null)
+			return;
+		if(level==0){
+			System.out.print(root.data+" ");
+			return;
+		}
+		else{
+			myPrintEachLevel(root.left, level-1);
+			myPrintEachLevel(root.right, level-1);
+		}
+	}
+	
+	
+	
 	public boolean search(int data) {
 		Node focusNode = this.root;
 
